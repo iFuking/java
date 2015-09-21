@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.com.jtang.healthcloud.pojo.Device" table="device">
+        <meta attribute="class-description">
+            This class contains the Device detail.
+        </meta>
+        <id name="deviceId" type="string" column="deviceId"/>
+        <property name="place" column="place" type="string"/>
+    </class>
+</hibernate-mapping>

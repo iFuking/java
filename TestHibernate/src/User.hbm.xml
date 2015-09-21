@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="cn.com.jtang.healthcloud.pojo.User" table="user">
+        <meta attribute="class-description">
+            This class contains the User detail.
+        </meta>
+        <id name="userId" type="int" column="userId">
+            <generator class="native"/>
+        </id>
+        <property name="subscribe" column="subscribe" type="string"/>
+        <property name="openId" column="openId" type="string"/>
+        <property name="nickname" column="nickname" type="string"/>
+        <property name="sex" column="sex" type="string"/>
+        <property name="age" column="age" type="string"/>
+        <property name="language" column="language" type="string"/>
+        <property name="realName" column="realName" type="string"/>
+        <property name="cardId" column="cardId" type="string"/>
+        <property name="telephone" column="telephone" type="string"/>
+        <property name="avatarUrl" column="avatarUrl" type="string"/>
+        <property name="city" column="city" type="string"/>
+        <property name="province" column="province" type="string"/>
+        <property name="country" column="country" type="string"/>
+        <property name="subscribeTime" column="subscribeTime" type="string"/>
+        <property name="unionId" column="unionId" type="string"/>
+        <property name="remark" column="remark" type="string"/>
+        <property name="groupId" column="groupId" type="string"/>
+    </class>
+</hibernate-mapping>

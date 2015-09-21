@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="cn.com.jtang.healthcloud.pojo.Relation" table="relation">
+      <meta attribute="class-description">
+         This class contains the Relation detail.
+      </meta>
+      <id name="openId" type="string" column="openId"/>
+      <property name="reportId" column="reportId" type="string"/>
+      <property name="deviceId" column="deviceId" type="string"/>
+      <property name="timestamp" column="timestamp" type="string"/>
+   </class>
+</hibernate-mapping>

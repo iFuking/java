@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="cn.com.jtang.healthcloud.pojo.Report" table="report">
+      <meta attribute="class-description">
+         This class contains the Report detail.
+      </meta>
+      <id name="reportId" type="string" column="reportId"/>
+      <property name="timestamp" column="timestamp" type="string"/>
+      <property name="height" column="height" type="string"/>
+      <property name="weight" column="weight" type="string"/>
+      <property name="bodyFatRate" column="bfr" type="string"/>
+      <property name="spo2h" column="spo2h" type="string"/>
+      <property name="systolicPressure" column="sbp" type="string"/>
+      <property name="diastolicPressure" column="dbp" type="string"/>
+      <property name="beatsPerMinute" column="bpm" type="string"/>
+      <property name="viscera" column="viscera" type="string"/>
+      <property name="spine" column="spine" type="string"/>
+      <property name="digestion" column="digestion" type="string"/>
+      <property name="urinary" column="urinary" type="string"/>
+      <property name="advice" column="advice" type="string"/>
+   </class>
+</hibernate-mapping>
