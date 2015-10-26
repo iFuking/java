@@ -101,6 +101,27 @@ public class ManageUser {
         }
         return users;
     }
+    
+    // SELECT n rows
+    public List<User> listUser(int startRow, int numbers) {
+    	Session session = factory.openSession();
+        Transaction tx = null;
+        List<User> users = null;
+        try {
+        	tx = session.beginTransaction();
+        	Query query = session.createQuery("FROM User");
+        	query.setFirstResult(startRow-1);
+        	query.setMaxResults(numbers);
+        	users = query.list();
+        	tx.commit();
+        } catch (HibernateException e) {
+            if (tx != null) tx.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return users;
+    }
 
     // SELECT a record in table
     public User selectUser(String openId) {
