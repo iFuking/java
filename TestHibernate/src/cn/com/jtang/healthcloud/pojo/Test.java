@@ -13,9 +13,10 @@ public class Test {
 	private void testManageUser() {
 		ManageUser manager = new ManageUser();
 		
-		User user = new User();
-		user.setUserId(2).setOpenId("Bob");
-		manager.addOrUpdateUser(user);
+		List<User> users = manager.listUser(1, 15);
+		for (int i = 0; i < users.size(); ++i) {
+			System.out.println(users.get(i).getUserId() + ", " + users.get(i).getOpenId());
+		}
 		return;
 	}
 	
@@ -52,7 +53,7 @@ public class Test {
 	
 	public static void main(String[] args) {
 		Test test = new Test();
-		test.testManageCache();
+		test.testManageUser();
 		return;
 	}
 }
